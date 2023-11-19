@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon"  href="https://i.pinimg.com/originals/d2/68/dc/d268dc2646418535b8f90a1d059502ec.jpg">
+    <title> NEW GARDEN </title>
+    <link rel="stylesheet" href="indezDeImoveis.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body,h2,h3,h4,h6 {
+        font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
+    </style>
+    </head>
+    <body>
+
+    <!-- BARRA LATERAL (E MENU PARA TELAS PEQUENAS) -->
+    <nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+        <h3> Apartamento com 4 Quartos à venda, 203m² - Campo Belo </h3>
+        <h3> A partir de R$ 2.250.000 </h3>
+        <h6> À vista </h6>
+        <ul class="subinfo w3-text-dark-grey">
+            <li class="subinfo-item w3-text-dark-grey">Condomínio R$ 5.172 </li>
+            <br>
+            <li class="subinfo-item w3-text-dark-grey">IPTU R$ 10.000</li>
+        </ul>
+        <hr>
+        <form action="/php_inexistente.php" target="_blank">
+          <p><label><i class="fa fa-calendar-check-o"></i> Data inicial </label></p>
+          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>          
+          <p><label><i class="fa fa-calendar-o"></i> Data final </label></p>
+          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>        
+          <p><label><i class="fa fa-male"></i> Quantidade de adultos </label></p>
+          <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">              
+          <p><label><i class="fa fa-child"></i> Quantidade de crianças </label></p>
+          <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+          <p><button class="w3-button w3-block w3-red w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Verificar </button></p>
+        </form>
+      </div>
+      <div class="w3-bar-block">
+        <a href="propridades.html" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Imóveis </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Inscrever-se </a>
+        <a href="projetoWEB.html" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-home"></i> Início </a>
+      </div>
+    </nav>
+   
+    <!-- BARRA LATERAL EM TELAS PEQUENAS -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+      <span class="w3-bar-item"> Informações </span>
+      <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+   
+    <!-- EFEITO DE SOBREPOSIÇÃO AO ABRIR A BARRA LATERAL EM TELAS PEQUENAS -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+   
+    <!-- !CONTEÚDO DA PAGINA! -->
+    <div class="w3-main w3-white" >
+   
+    <!-- EMPURRAR PARA BAIXO O CONTEÚDO EM TELAS PEQUENAS -->
+      <div class="w3-hide-large" style="margin-top:80px"></div>
+   
+    <!-- CABEÇALHO DA APRESENTAÇÃO DE SLIDES -->
+    <header class="header" data-header>
+      <div class="overlay" data-overlay></div>
+      <div class="header-top">
+        <div class="container">
+          <ul class="header-top-list">
+            <li>
+              <a href="mailto:itaciasantana17@gmail.com" class="header-top-link">
+                <ion-icon name="mail-outline"></ion-icon>
+                <span>itaciasantana17@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-top-link">
+                <ion-icon name="location-outline"></ion-icon>
+                <address> Euclides da Cunha, Bahia </address>
+              </a>
+            </li>
+          </ul>
+          <div class="wrapper">
+            <ul class="header-top-social-list">
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/if.terceirao/" class="header-top-social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+            </ul>
+            <button class="header-top-btn">Mudar para o tema escuro</button>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+          </a>
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">
+                <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+              </a>
+              <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+            <div class="navbar-bottom">
+              <ul class="navbar-list">
+                <li>
+                  <a href="projetoWEB.html" class="navbar-link" data-nav-link>Inicio</a>
+                </li>
+                <li>
+                  <a href="propridades.html" class="navbar-link" data-nav-link>Propriedades</a>
+                </li>
+                <li>
+                  <a href="contato.html" class="navbar-link" data-nav-link>Contato</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header-bottom-actions">
+            <button class="header-bottom-actions-btn" aria-label="Search">
+              <ion-icon name="search-outline"></ion-icon>
+              <span>Search</span>
+            </button>
+            <a href="LoginNewGarden.html" class="header-bottom-actions-btn" aria-label="Profile">
+              <ion-icon name="person-outline"></ion-icon>
+              <span >Profile</span>
+            </a>
+            <button class="header-bottom-actions-btn" aria-label="Cart">
+              <ion-icon name="cart-outline"></ion-icon>
+              <span>Cart</span>
+            </button>
+            <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+              <ion-icon name="menu-outline"></ion-icon>
+              <span>Menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <main>
+      <article>
+  
+        <h2 class="h2 section-title">Apartamento com 4 Quartos à venda, 203m² - Campo Belo</h2>
+
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="apartamento2-sala_de_estar.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="apartamento2-cozinha.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="apartamento2-banheiro.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="apartamento2-quarto.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="apartamento2-quarto2.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="apartamento2-quarto3.jpg" style="width:100%">
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-sala_de_estar.jpg" style="width:100%"
+           onclick="currentSlide(1)" alt="Sala de Estar">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-cozinha.jpg" style="width:100%"
+           onclick="currentSlide(2)" alt="Cozinha">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-banheiro.jpg" style="width:100%"
+           onclick="currentSlide(3)" alt="Banheiro">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-quarto.jpg" style="width:100%"
+           onclick="currentSlide(4)" alt="Quarto">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-quarto2.jpg" style="width:100%"
+           onclick="currentSlide(5)" alt="Quarto">
+        </div>    
+        <div class="column">
+          <img class="demo cursor" src="apartamento2-quarto3.jpg" style="width:100%"
+           onclick="currentSlide(6)" alt="Quarto">
+        </div>
+      </div>
+    </div>
+    <!-- INFORMAÇÕES SOBRE O IMÓVEL -->
+      <div class="w3-container">
+        <div class="w3-row w3-large">
+            <table class="w3-table">
+                <tr>
+                <th><h4><strong>O Espaço</strong></h4></th>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-fw fa-male"></i>Máximo de pessoas: 4</td>
+                    <td><i class="fa fa-fw fa-clock-o"></i>Check In: A qualquer hora</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-fw fa-bath"></i>Banheiros: 2</td>
+                    <td><i class="fa fa-fw fa-clock-o"></i>Check Out: A qualquer hora</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-fw fa-bed"></i>Quartos: 2</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    <!-- INSTALAÇÕES DISPONÍVEIS -->
+        <h4><strong> Instalações Disponíveis </strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-shower"></i> Banho </p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi </p>
+            <p><i class="fa fa-fw fa-tv"></i> TV </p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-bicycle"></i> Bicicletário </p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Ar-condicionado </p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessibilidade </p>
+          </div>
+        </div>
+        <hr>
+    <!-- INFORMAÇÕES EXTRAS/DESCRIÇÃO -->
+        <h4><strong> Informações Extras/Descrição </strong></h4>
+        <p>Localização: Rua Raimundo Correia, 19 - Copacabana, Rio de Janeiro - RJ</p>
+        <p>Aceita animais
+            <br>
+            Condomínio fechado
+            <br>
+            Elevador
+            <br>
+            Mobiliado
+            <br>
+            Portão eletrônico
+            <br>
+            Portaria 24h
+            <br>
+            <br>
+            O apartamento no bairro Copacabana tem 105 metros quadrados com 3 quartos sendo 1 suíte e 2 banheiros
+            <br>
+            Imóvel em excelente localização. Área nobre do posto quatro , colado a praia de Copacabana . Próximo a forte comércio e transporte publico, pertinho do metrô da Siqueira Campos.
+            <br><br>
+            Imóvel com garagem alugada. Imóvel composto de salão dois ambientes , sendo sala de jantar e sala de estar . três quartos sendo um suíte e todos com ar condicionado.
+            <br><br>
+            Cozinha grande com bancadas e armários , com boa entrada de ar natural. Área de serviço e quarto de emprega.
+            <br>
+            Imóvel Mobiliado.
+            <br>
+            Gostou?
+            <br>
+            Entre em contato.
+            <br>
+            Estudo proposta.
+            <br>
+            CRECI: 66.302.
+          <br>
+        </p>
+        <p> Nós aceitamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+        <hr>
+    <!-- REGRAS -->
+        <h4><strong> Regras </strong></h4>
+        <ul>
+          <li>
+            Contribuir com as despesas coletivas de acordo com a fração
+             ideal estipulada para a taxa de condomínio;
+          </li>
+          <li>
+            Não realizar obras em sua unidade particular que possam comprometer a segurança da edificação;
+          </li>
+            <li>
+              Não realizar alterações na forma ou na cor da fachada,
+               de esquadrias externas e das partes de convívio comum, se assim for estipulado;
+            </li>
+            <li>
+              Utilizar as áreas coletivas da forma como foram projetadas para serem utilizadas;
+            </li>
+            <li>
+              Utilizar sua propriedade particular com a mesma destinação da edificação,
+               sem prejudicar a segurança, salubridade e o sossego dos vizinhos.
+            </li>
+            <li>
+              O horário para utilização de áreas comuns, como salão de festas, playground, piscina e área de lazer é das 9:00 às 24:00;
+            </li>
+            <li>
+              O período das 19:00 às 10:00 é declarado como horário de silêncio;
+            </li>
+            <li>
+              O limite de convidados nas áreas comuns é de 10 pessoas,
+               este críterio está sujeito a mudanças em casos especiais;
+            </li>
+            <li>
+              O uso do salão de festas só poderá ser feito a partir de reservas;
+            </li>
+            <li>
+              O horário de recolhimento do lixo é às 9:00, 18:30 e as 20:00;
+            </li>
+            <li>
+              O uso de vagas na garagem é exclusivamente para moradores do prédio;
+            </li>
+            <li>
+              Reformas devem ser feitas das 13:00 às 19:00;
+            </li>
+            <li>
+              Equipamentos e móveis de uso comum devem ser mantidos limpos;
+            </li>
+            <li>
+              A recepção de entregadores de encomendas e delivery é feita na portaria;
+            </li>
+            <li>
+              Barulho excessivo e a presença de animais fora da portaria e de seus andares
+               próprios podem ser sujeitos a multas;
+            </li>
+            <li>
+              Mudanças e prestações de serviços devem seguir as diretrizes do condomínio.
+            </li>
+        </ul>
+        <p> Inscreva-se para receber atualizações sobre datas disponíveis e ofertas especiais. </p>
+        <p><button class="w3-button w3-red w3-third" onclick="document.getElementById('subscribe').style.display='block'"> Inscrever-se </button></p>
+      </div>
+      <hr>
+     
+    <!-- CONTATO -->
+      <div class="w3-container">
+        <h2>Contato</h2>
+        <i class="fa fa-map-marker" style="width:30px"></i> Rua Raimundo Correia, 19 - Copacabana, Rio de Janeiro - RJ <br>
+        <i class="fa fa-phone" style="width:30px"></i> Telefone: +00 0000-00000<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: email@email.com<br>
+        <p> Dúvidas? Vá em frente, pergunte a eles: </p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Menssagem" required name="Message"></p>
+        <button type="submit" class="w3-button w3-red w3-third"> Enviar mensagem </button>
+        </form>
+      </div>
+      <br><br>
+      <!-- FIM DA PÁGINA -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+              </a>
+              <p class="section-text">
+                Somos uma das melhores empressas de nogócios imobiliários. Desenvolvemos esse site com o objetivo de ajudar vocês a encontrar um lugar cofortável e acolhedor, onde você se sinta bem em está naquele ambriente. Esperamos está ajudando o(a) senhor(a) nesse momento de dúvida e insegurança, pois nosso lar é nosso melhor lugar.
+              </p>
+              <ul class="contact-list">
+                <li>
+                  <a href="#" class="contact-link">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <address> Euclides da Cunha, Bahia </address>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+0123456789" class="contact-link">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span>+55 75 998201882</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:contact@homeverse.com" class="contact-link">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span>itaciasantana17@gmail.com</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="social-list">
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-link-box">
+              <ul class="footer-list">
+                <li>
+                  <p class="footer-list-title">Empresa</p>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Sobre</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Todos os produtos</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Mapas de locais</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Perguntas frequêntes</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Contate-nos</a>
+                </li>
+              </ul>
+              <ul class="footer-list">
+                <li>
+                  <p class="footer-list-title">Serviços</p>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Rasteamento de pedidos</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Lista de Desejos</a>
+                </li>
+    
+                <li>
+                  <a href="#" class="footer-link">Conecte-se</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Minha conta</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Termos e Condições</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Ofertas promocionais</a>
+                </li>
+              </ul>
+              <ul class="footer-list">
+                <li>
+                  <p class="footer-list-title">Serviço de atendimento ao Consumidor</p>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Conecte-se</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Minha conta</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Lista de Desejos</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Rasteamento de pedidos</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Perguntas frequêntes</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Contate-nos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+  
+     
+   
+    <!-- INSCREVER-SE -->
+    <div id="subscribe" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+        <div class="w3-container w3-white w3-center">
+          <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+          <h2 class="w3-wide"> INSCREVA-SE NESTE IMÓVEL </h2>
+          <p> Junte-se à nossa lista de discussão para receber atualizações sobre datas disponíveis e ofertas especiais. </p>
+          <p><input class="w3-input w3-border" type="text" placeholder=" Digite seu email "></p>
+          <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'"> Inscrever-se </button>
+        </div>
+      </div>
+    </div>
+   
+    <script>
+    // SCRIPT PARA ABRIR E FECHAR A BARRA LATERAL EM TABLETS E TELEFONES
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+   
+    // CARROSSEL DE SLIDES DE IMAGENS DO APARTAMENTO
+
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+    </body>
+    </html>
