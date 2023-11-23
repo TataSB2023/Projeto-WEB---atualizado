@@ -14,25 +14,32 @@
         <div class="inner-box">
           <div class="forms-wrap">
             <form action="index.html" autocomplete="off" class="sign-in-form">
-              <div class="logo">
+              <div id="mouseover" onmouseover="mudarCor(this)" onmouseout="restaurarCor(this)">
+                <div class="logo">
                 <img src="newgarden.jpg" alt="easyclass" />
                 <h4> NEW GARDEN</h4>
+                </div>
               </div>
+              
 
               <div class="heading">
                 <h2>Bem vindo(a)!</h2>
                 <h6>Ainda não  tem conta?</h6>
-                <a href="#" class="toggle">Inscreve-se</a>
+                <a href="#" class="toggle">Inscreva-se</a>
               </div>
 
               <div class="actual-form">
                 <div class="input-wrap">
                   <input
                     type="text"
+                    id="nome"
                     minlength="4"
                     class="input-field"
                     autocomplete="off"
                     required
+                    value="Digite aqui" 
+                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
+                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Nome</label>
                 </div>
@@ -44,6 +51,9 @@
                     class="input-field"
                     autocomplete="off"
                     required
+                    value="Digite aqui" 
+                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
+                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Senha</label>
                 </div>
@@ -63,7 +73,7 @@
               </div>
 
               <div class="heading">
-                <h2>Inscreve-se</h2>
+                <h2>Inscreva-se</h2>
                 <h6>Já tem conta?</h6>
                 <a href="#" class="toggle">Entrar</a>
               </div>
@@ -72,10 +82,14 @@
                 <div class="input-wrap">
                   <input
                     type="text"
+                    id="nome1"
                     minlength="4"
                     class="input-field"
                     autocomplete="off"
                     required
+                    value="Digite aqui" 
+                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
+                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Nome</label>
                 </div>
@@ -86,6 +100,9 @@
                     class="input-field"
                     autocomplete="off"
                     required
+                    value="Digite aqui" 
+                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
+                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Email</label>
                 </div>
@@ -97,6 +114,9 @@
                     class="input-field"
                     autocomplete="off"
                     required
+                    value="Digite aqui" 
+                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
+                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Senha</label>
                 </div>
@@ -137,5 +157,29 @@
     <!-- Javascript file -->
 
     <script src="login.js"></script>
+    <script>
+		document.getElementById("nome").addEventListener("keypress", function(event) {
+    var key = event.keyCode;
+    // O espaço não funciona (key == 32)
+    if (key <= 65 && key <= 90 || key == 8 || key == 32) {
+      event.preventDefault();
+      }
+    });
+    document.getElementById("nome1").addEventListener("keypress", function(event) {
+    var key = event.keyCode;
+    // O espaço não funciona (key == 32)
+    if (key <= 65 && key <= 90 || key == 8 || key == 32) {
+      event.preventDefault();
+      }
+    });
+    function mudarCor(elemento) {
+        elemento.style.backgroundColor = '#0b2c3c';
+        elemento.style.color = 'white';
+    }
+    function restaurarCor(elemento) {
+        elemento.style.backgroundColor = 'white'; 
+        elemento.style.color = 'black';
+    }
+    </script>
   </body>
 </html>

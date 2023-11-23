@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+#mouseover{
+  padding: 20px;
+  cursor: pointer;
+  color: #151111;
+}
+
 body,
 input {
   font-family: "Poppins", sans-serif;
@@ -87,7 +93,6 @@ form.sign-up-form {
   font-size: 1.1rem;
   margin-top: -9px;
   letter-spacing: -0.5px;
-  color: #151111;
 }
 
 .heading h2 {
