@@ -21,9 +21,9 @@
     rel="stylesheet">
 </head>
 <body>
-    <p id="pNome"></p>
       <script>
         var nome = prompt("DIGITE SEU NOME: ");
+        alert("Bem vindo(a) ao nosso site " + nome + "!");
       </script>
   
 
@@ -114,10 +114,10 @@
             <ion-icon name="search-outline"></ion-icon>
             <span>Search</span>
           </button>
-          <a href="LoginNewGarden.html" class="header-bottom-actions-btn" aria-label="Profile">
+          <button class="header-bottom-actions-btn" aria-label="Profile" onclick="location.href='LoginNewGarden.html'">
             <ion-icon name="person-outline"></ion-icon>
             <span >Profile</span>
-          </a>
+          </button>
           <button class="header-bottom-actions-btn" aria-label="Cart">
             <ion-icon name="cart-outline"></ion-icon>
             <span>Cart</span>

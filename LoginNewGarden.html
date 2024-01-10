@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
+    <script>
+      alert("Crie uma conta e receba novidades!");
+    </script>
     <main>
       <div class="box">
         <div class="inner-box">
@@ -37,9 +40,6 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    value="Digite aqui" 
-                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
-                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Nome</label>
                 </div>
@@ -51,9 +51,6 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    value="Digite aqui" 
-                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
-                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Senha</label>
                 </div>
@@ -87,9 +84,6 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    value="Digite aqui" 
-                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
-                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Nome</label>
                 </div>
@@ -100,9 +94,6 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    value="Digite aqui" 
-                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
-                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Email</label>
                 </div>
@@ -114,9 +105,6 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    value="Digite aqui" 
-                    onblur="if(this.value == '') {this.value = 'Digite aqui';}" 
-                    onfocus="if(this.value == 'Digite aqui') {this.value = '';}"
                   />
                   <label>Senha</label>
                 </div>
@@ -157,29 +145,5 @@
     <!-- Javascript file -->
 
     <script src="login.js"></script>
-    <script>
-		document.getElementById("nome").addEventListener("keypress", function(event) {
-    var key = event.keyCode;
-    // O espaço não funciona (key == 32)
-    if (key <= 65 && key <= 90 || key == 8 || key == 32) {
-      event.preventDefault();
-      }
-    });
-    document.getElementById("nome1").addEventListener("keypress", function(event) {
-    var key = event.keyCode;
-    // O espaço não funciona (key == 32)
-    if (key <= 65 && key <= 90 || key == 8 || key == 32) {
-      event.preventDefault();
-      }
-    });
-    function mudarCor(elemento) {
-        elemento.style.backgroundColor = '#0b2c3c';
-        elemento.style.color = 'white';
-    }
-    function restaurarCor(elemento) {
-        elemento.style.backgroundColor = 'white'; 
-        elemento.style.color = 'black';
-    }
-    </script>
   </body>
 </html>

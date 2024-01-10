@@ -3,9 +3,10 @@
 <head>
     <link rel="shortcut icon"  href="https://i.pinimg.com/originals/d2/68/dc/d268dc2646418535b8f90a1d059502ec.jpg">
     <title> NEW GARDEN </title>
-    <link rel="stylesheet" href="indezDeImoveis.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ImovelCSS.css">
+    <link rel="stylesheet" href="ImovelCSS2.css">
     <link rel="stylesheet" href="style.css">
     <style>
     body,h2,h3,h4,h6 {
@@ -28,9 +29,9 @@
         <hr>
         <form action="/php_inexistente.php" target="_blank">
           <p><label><i class="fa fa-calendar-check-o"></i> Data inicial </label></p>
-          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>          
+          <input class="w3-input w3-border" type="date" name="CheckIn" required>          
           <p><label><i class="fa fa-calendar-o"></i> Data final </label></p>
-          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>        
+          <input class="w3-input w3-border" type="date" name="CheckOut" required>        
           <p><label><i class="fa fa-male"></i> Quantidade de adultos </label></p>
           <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">              
           <p><label><i class="fa fa-child"></i> Quantidade de crianças </label></p>
@@ -39,7 +40,7 @@
         </form>
       </div>
       <div class="w3-bar-block">
-        <a href="propridades.html" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Imóveis </a>
+        <a href="propridades.html" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Propriedades </a>
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Inscrever-se </a>
         <a href="projetoWEB.html" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-home"></i> Início </a>
       </div>
@@ -135,6 +136,7 @@
             </ul>
           </div>
         </nav>
+        <!--
         <div class="header-bottom-actions">
           <button class="header-bottom-actions-btn" aria-label="Search">
             <ion-icon name="search-outline"></ion-icon>
@@ -153,6 +155,7 @@
             <span>Menu</span>
           </button>
         </div>
+        -->
       </div>
     </div>
   </header>

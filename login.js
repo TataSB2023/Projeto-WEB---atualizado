@@ -37,3 +37,26 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+
+document.getElementById("nome").addEventListener("keypress", function(event) {
+  var key = event.keyCode;
+  // O espaço não funciona (key == 32)
+  if (key <= 65 && key <= 90 || key == 8 || key == 32) {
+    event.preventDefault();
+    }
+  });
+  document.getElementById("nome1").addEventListener("keypress", function(event) {
+  var key = event.keyCode;
+  // O espaço não funciona (key == 32)
+  if (key <= 65 && key <= 90 || key == 8 || key == 32) {
+    event.preventDefault();
+    }
+  });
+  function mudarCor(elemento) {
+      elemento.style.backgroundColor = '#0b2c3c';
+      elemento.style.color = 'white';
+  }
+  function restaurarCor(elemento) {
+      elemento.style.backgroundColor = 'white'; 
+      elemento.style.color = 'black';
+  }
