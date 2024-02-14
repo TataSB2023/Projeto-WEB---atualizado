@@ -38,20 +38,31 @@ bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
 
-document.getElementById("nome").addEventListener("keypress", function(event) {
+document.getElementById("nome1").addEventListener("keypress", function(event) {
   var key = event.keyCode;
   // O espaço não funciona (key == 32)
   if (key <= 65 && key <= 90 || key == 8 || key == 32) {
     event.preventDefault();
     }
   });
-  document.getElementById("nome1").addEventListener("keypress", function(event) {
+  document.getElementById("nome2").addEventListener("keypress", function(event) {
   var key = event.keyCode;
   // O espaço não funciona (key == 32)
   if (key <= 65 && key <= 90 || key == 8 || key == 32) {
     event.preventDefault();
     }
   });
+  const inputField = document.getElementById("nome1");
+    inputField.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        inputField.value = inputField.value.toUpperCase();
+    });
+
+    const inputField2 = document.getElementById("nome2");
+    inputField2.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        inputField2.value = inputField2.value.toUpperCase();
+    });
   function mudarCor(elemento) {
       elemento.style.backgroundColor = '#0b2c3c';
       elemento.style.color = 'white';

@@ -192,6 +192,10 @@ label {
   color: #8371fd;
 }
 
+a {
+  text-decoration: none;
+}
+
 main.sign-up-mode form.sign-in-form {
   opacity: 0;
   pointer-events: none;
