@@ -5,18 +5,19 @@
     <title> NEW GARDEN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="ImovelCSS.css">
-    <link rel="stylesheet" href="ImovelCSS2.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/ImovelCSS.css">
+    <link rel="stylesheet" href="css/ImovelCSS2.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
     body,h2,h3,h4,h6 {
         font-family: "Raleway", Arial, Helvetica, sans-serif
     }
     </style>
     </head>
-    <body>
+    <body id="body">
+      <script src="js/mainjs.js"></script>
     <!-- BARRA LATERAL (E MENU PARA TELAS PEQUENAS) -->
-    <nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+    <nav class="w3-sidebar w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
       <div class="w3-container w3-display-container w3-padding-16">
         <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
         <h3> Apartamento com 3 Quartos à venda, 75m² - Leblon Venda Nova </h3>
@@ -56,7 +57,7 @@
     <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
    
     <!-- !CONTEÚDO DA PAGINA! -->
-    <div class="w3-main w3-white" >
+    <div class="w3-main" >
    
     <!-- EMPURRAR PARA BAIXO O CONTEÚDO EM TELAS PEQUENAS -->
       <div class="w3-hide-large" style="margin-top:80px"></div>
@@ -104,19 +105,19 @@
               </a>
             </li>
           </ul>
-          <button class="header-top-btn">Mudar para o tema escuro</button>
+          <button class="header-top-btn" id="dark_theme" onclick="changeTheme();changeColor()">Mudar para o tema escuro</button>
         </div>
       </div>
     </div>
     <div class="header-bottom">
       <div class="container">
         <a href="#" class="logo">
-          <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+          <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
         </a>
         <nav class="navbar" data-navbar>
           <div class="navbar-top">
             <a href="#" class="logo">
-              <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+              <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
             </a>
             <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
               <ion-icon name="close-outline"></ion-icon>
@@ -169,35 +170,35 @@
     <div class="container">
       <div class="mySlides">
         <div class="numbertext">1 / 6</div>
-        <img src="apartamento3-frente.jpg" style="width:100%">
+        <img src="images/apartamento3-frente.jpg" style="width:100%">
       </div>
 
 
       <div class="mySlides">
         <div class="numbertext">2 / 6</div>
-        <img src="apartamento3-sala_de_estar.jpg" style="width:100%">
+        <img src="images/apartamento3-sala_de_estar.jpg" style="width:100%">
       </div>
 
 
       <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="apartamento3-cozinha.jpg" style="width:100%">
+        <img src="images/apartamento3-cozinha.jpg" style="width:100%">
       </div>
     
       <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="apartamento3-banheiro.jpg" style="width:100%">
+        <img src="images/apartamento3-banheiro.jpg" style="width:100%">
       </div>
 
 
       <div class="mySlides">
         <div class="numbertext">5 / 6</div>
-        <img src="apartamento3-quarto.jpg" style="width:100%">
+        <img src="images/apartamento3-quarto.jpg" style="width:100%">
       </div>
     
       <div class="mySlides">
         <div class="numbertext">6 / 6</div>
-        <img src="apartamento3-quarto2.jpg" style="width:100%">
+        <img src="images/apartamento3-quarto2.jpg" style="width:100%">
       </div>
     
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -211,27 +212,27 @@
 
       <div class="row">
         <div class="column">
-          <img class="demo cursor" src="apartamento3-frente.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-frente.jpg" style="width:100%"
            onclick="currentSlide(1)" alt="Frente">
         </div>
         <div class="column">
-          <img class="demo cursor" src="apartamento3-sala_de_estar.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-sala_de_estar.jpg" style="width:100%"
            onclick="currentSlide(2)" alt="Sala de Estar">
         </div>
         <div class="column">
-          <img class="demo cursor" src="apartamento3-cozinha.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-cozinha.jpg" style="width:100%"
            onclick="currentSlide(3)" alt="Cozinha">
         </div>
         <div class="column">
-          <img class="demo cursor" src="apartamento3-banheiro.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-banheiro.jpg" style="width:100%"
            onclick="currentSlide(4)" alt="Banheiro">
         </div>
         <div class="column">
-          <img class="demo cursor" src="apartamento3-quarto.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-quarto.jpg" style="width:100%"
            onclick="currentSlide(5)" alt="Quarto">
         </div>    
         <div class="column">
-          <img class="demo cursor" src="apartamento3-quarto2.jpg" style="width:100%"
+          <img class="demo cursor" src="images/apartamento3-quarto2.jpg" style="width:100%"
            onclick="currentSlide(6)" alt="Quarto">
         </div>
       </div>
@@ -384,7 +385,7 @@
         <div class="container">
           <div class="footer-brand">
             <a href="#" class="logo">
-              <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+              <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
             </a>
             <p class="section-text">
               Somos uma das melhores empressas de nogócios imobiliários. Desenvolvemos esse site com o objetivo de ajudar vocês a encontrar um lugar cofortável e acolhedor, onde você se sinta bem em está naquele ambriente. Esperamos está ajudando o(a) senhor(a) nesse momento de dúvida e insegurança, pois nosso lar é nosso melhor lugar.

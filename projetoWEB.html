@@ -8,10 +8,10 @@
   <title> NEW GARDEN </title>
 
   <!-- ICON -->
-  <link rel="shortcut icon" href="newgarden.jpg" type="image/svg+xml">
+  <link rel="shortcut icon" href="images/newgarden.jpg" type="image/svg+xml">
 
   <!-- LINK DO CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- LINK DA FONTES DO GOOGLE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +21,17 @@
     rel="stylesheet">
 </head>
 <body>
-      <script>
-        var nome = prompt("DIGITE SEU NOME: ");
-        alert("Bem vindo(a) ao nosso site " + nome + "!");
-      </script>
+  <script src="js/mainjs.js"></script>
+  <script>
+    var nomeComp = prompt("Digite seu nome completo:");
+    if (nomeComp === null || nomeComp === "") {
+      nome = "pessoa"
+    } else{
+      nome = nomeComp.split(" ")[0]
+      nome = nome.charAt(0).toUpperCase() + nome.slice(1)
+    }
+    alert("Bem vindo(a) ao nosso site " + nome + "!");
+  </script>
   
 
 
@@ -71,19 +78,19 @@
               </a>
             </li>
           </ul>
-          <button class="header-top-btn">Mudar para o tema escuro</button>
+          <button class="header-top-btn" id="dark_theme" onclick="changeTheme()">Mudar para o tema escuro</button>
         </div>
       </div>
     </div>
     <div class="header-bottom">
       <div class="container">
         <a href="#" class="logo">
-          <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+          <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
         </a>
         <nav class="navbar" data-navbar>
           <div class="navbar-top">
             <a href="#" class="logo">
-              <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+              <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
             </a>
             <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
               <ion-icon name="close-outline"></ion-icon>
@@ -147,10 +154,10 @@
             <p class="hero-text">
               Encontre a casa dos seus sonhos!
             </p>
-            <button  class="btn" onclick="document.getElementById('id01').style.display='block'" style="font-weight:500;"><a href="contato.html">faça uma pergunta</a></button>
+            <button  class="btn" style="font-weight:500;"><a href="contato.html">faça uma pergunta</a></button>
           </div>
           <figure class="hero-banner">
-            <img src="WEB.jpg" alt="Modern house model" class="w-100">
+            <img src="images/WEB.jpg" alt="Modern house model" class="w-100">
           </figure>
         </div>
       </section>
@@ -162,7 +169,7 @@
       <section class="about" id="about">
         <div class="container">
           <figure class="about-banner">
-            <img src="newgarden.jpg" alt="House interior">
+            <img src="images/newgarden.jpg" alt="House interior">
           </figure>
           <div class="about-content">
             <p class="section-subtitle">Sobre a nossa imobiliária</p>
@@ -215,7 +222,7 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <img src="service-1.png" alt="Service icon">
+                  <img src="images/service-1.png" alt="Service icon">
                 </div>
                 <h3 class="h3 card-title">
                   <a href="#">Compre uma casa</a>
@@ -234,7 +241,7 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <img src="service-2.png" alt="Service icon">
+                  <img src="images/service-2.png" alt="Service icon">
                 </div>
                 <h3 class="h3 card-title">
                   <a href="#">Alugue uma casa</a>
@@ -253,7 +260,7 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <img src="service-3.png" alt="Service icon">
+                  <img src="images/service-3.png" alt="Service icon">
                 </div>
                 <h3 class="h3 card-title">
                   <a href="#">Vender uma casa</a>
@@ -284,7 +291,7 @@
               <div class="property-card">
                 <figure class="card-banner">
                   <a href="ImovelVilaMascote.html" target="_blank">
-                    <img src="apartamento1-sala_de_estar.jpg" alt="ImovelVilaMascote" class="w-100">
+                    <img src="images/apartamento1-sala_de_estar.jpg" alt="ImovelVilaMascote" class="w-100">
                   </a>
                   <div class="card-badge green">PARA ALUGAR</div>
                   <div class="banner-actions">
@@ -295,7 +302,7 @@
                     </button>
                     <button class="banner-actions-btn">
                       <ion-icon name="camera"></ion-icon>
-                      <span>4</span>
+                      <span>6</span>
                     </button>
                   </div>
                 </figure>
@@ -330,7 +337,7 @@
                 <div class="card-footer">
                   <div class="card-author">
                     <figure class="author-avatar">
-                      <img src="newgarden.jpg" alt="William Seklo" class="w-100">
+                      <img src="images/newgarden.jpg" alt="William Seklo" class="w-100">
                     </figure>
                     <div>
                       <p class="author-name">
@@ -353,7 +360,7 @@
               <div class="property-card">
                 <figure class="card-banner">
                   <a href="ImovelCampoBelo.html" target="_blank">
-                    <img src="apartamento2-sala_de_estar.jpg" alt="ImovelCampoBelo" class="w-100">
+                    <img src="images/apartamento2-sala_de_estar.jpg" alt="ImovelCampoBelo" class="w-100">
                   </a>
                   <div class="card-badge orange">À VENDA</div>
                   <div class="banner-actions">
@@ -363,7 +370,7 @@
                     </button>
                     <button class="banner-actions-btn">
                       <ion-icon name="camera"></ion-icon>
-                      <span>4</span>
+                      <span>6</span>
                     </button>
                   </div>
                 </figure>
@@ -398,7 +405,7 @@
                 <div class="card-footer">
                   <div class="card-author">
                     <figure class="author-avatar">
-                      <img src="newgarden.jpg" alt="William Seklo" class="w-100">
+                      <img src="images/newgarden.jpg" alt="William Seklo" class="w-100">
                     </figure>
                     <div>
                       <p class="author-name">
@@ -421,7 +428,7 @@
               <div class="property-card">
                 <figure class="card-banner">
                   <a href="ImovelLeblonVendaNova.html" target="_blank">
-                    <img src="apartamento3-sala_de_estar.jpg" alt="ImovelLeblonVendaNova" class="w-100">
+                    <img src="images/apartamento3-sala_de_estar.jpg" alt="ImovelLeblonVendaNova" class="w-100">
                   </a>
                   <div class="card-badge green">PARA ALUGAR</div>
                   <div class="banner-actions">
@@ -431,7 +438,7 @@
                     </button>
                     <button class="banner-actions-btn">
                       <ion-icon name="camera"></ion-icon>
-                      <span>4</span>
+                      <span>6</span>
                     </button>
                   </div>
                 </figure>
@@ -466,7 +473,7 @@
                 <div class="card-footer">
                   <div class="card-author">
                     <figure class="author-avatar">
-                      <img src="newgarden.jpg" alt="William Seklo" class="w-100">
+                      <img src="images/newgarden.jpg" alt="William Seklo" class="w-100">
                     </figure>
                     <div>
                       <p class="author-name">
@@ -619,7 +626,7 @@
       <div class="container">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <img src="NEW GARDEN (1).png" alt="Homeverse logo">
+            <img src="images/NEW GARDEN (1).png" alt="Homeverse logo">
           </a>
           <p class="section-text">
             Somos uma das melhores empressas de nogócios imobiliários. Desenvolvemos esse site com o objetivo de ajudar vocês a encontrar um lugar cofortável e acolhedor, onde você se sinta bem em está naquele ambriente. Esperamos está ajudando o(a) senhor(a) nesse momento de dúvida e insegurança, pois nosso lar é nosso melhor lugar.

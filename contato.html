@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="css/contato.css">
     <title>Formulário NG</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <h1>Formulário </h1>
         <form id="form">
             <div>
-                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
+                <input type="text" placeholder="Digite seu nome" id="nome" class="inputs required" oninput="nameValidate()">
                 <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
             </div>
             <div>
@@ -136,5 +136,16 @@
         }
     }
 
+    const inputField = document.getElementById("nome");
+    inputField.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        inputField.value = inputField.value.toUpperCase();
+    });
+
+    const inputField2 = document.getElementById("descricao");
+    inputField2.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        inputField2.value = inputField2.value.toUpperCase();
+    });
 </script>
 </html>
