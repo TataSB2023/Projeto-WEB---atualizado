@@ -127,9 +127,19 @@ function changeTheme(){
     document.documentElement.style.setProperty('--lighter-dark', '#5f5b5a');
     document.getElementById('dark_theme').innerHTML = "Mudar para o tema claro";
   }
-  
+
+  var header_and_footer = window.getComputedStyle(document.documentElement).getPropertyValue('--header-and-footer');
+  if (header_and_footer == '#adadaa'){
+    document.documentElement.style.setProperty('--header-and-footer', '#ffffff');
+    document.getElementById('dark_theme').innerHTML = "Mudar para o tema escuro";
+  }
+  else{
+    document.documentElement.style.setProperty('--header-and-footer', '#adadaa');
+    document.getElementById('dark_theme').innerHTML = "Mudar para o tema claro";
+  }
+
   //#5f5b5a header-bottom-actions-btn ion-icon
-  //#ff5a3d   #727172
+  //#ff5a3d   #727172  #adadaa
 }
 function changeColor(){
   var white = window.getComputedStyle(document.documentElement).getPropertyValue('--white');

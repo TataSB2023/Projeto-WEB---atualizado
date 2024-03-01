@@ -27,6 +27,7 @@
   --light-gray:hsl(0, 0%, 95%);
   --lighter-dark: hsl(180, 1%, 17%);
   --placeholder: hsl(0, 0%, 45%);
+  --header-and-footer: hsl(0, 0%, 100%);
 
 
 
@@ -316,7 +317,7 @@ button, a { transition: var(--transition); }
 .header-top-list { gap: 15px; }
 
 .header-top-link {
-  color: var(--white);
+  color: var(--header-and-footer);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   display: flex;
@@ -344,13 +345,13 @@ button, a { transition: var(--transition); }
 .header-top-social-list { gap: 8px; }
 
 .header-top-social-link {
-  color: var(--white);
+  color: var(--header-and-footer);
   font-size: 15px;
 }
 
 .header-top-btn {
   background: var(--orange-soda);
-  color: var(--white);
+  color: var(--header-and-footer);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   padding: 4px 15px;
@@ -1059,7 +1060,7 @@ button, a { transition: var(--transition); }
 
 .footer {
   background: var(--raisin-black-1);
-  color: var(--white);
+  color: var(--header-and-footer);
   margin-bottom: 68px;
 }
 
