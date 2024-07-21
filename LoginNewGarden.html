@@ -16,7 +16,7 @@
       <div class="box">
         <div class="inner-box">
           <div class="forms-wrap">
-            <form action="index.html" autocomplete="off" class="sign-in-form">
+            <form action="php/login_cadastro.php" method="post" autocomplete="off" class="sign-in-form">
               <a href="projetoWEB.html">
                 <div id="mouseover" onmouseover="mudarCor(this)" onmouseout="restaurarCor(this)">
                   <div class="logo">
@@ -35,25 +35,12 @@
 
               <div class="actual-form">
                 <div class="input-wrap">
-                  <input
-                    type="text"
-                    id="nome1"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
+                  <input type="text" id="nome1" name="nome1" minlength="4" class="input-field" autocomplete="off" required/>
                   <label>Nome</label>
                 </div>
 
                 <div class="input-wrap">
-                  <input
-                    type="password"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
+                  <input type="password" name="senha1" minlength="4" class="input-field" autocomplete="off" required/>
                   <label>Senha</label>
                 </div>
 
@@ -65,7 +52,7 @@
               </div>
             </form>
 
-            <form action="index.html" autocomplete="off" class="sign-up-form">
+            <form action="php/login_cadastro.php" method="post" autocomplete="off" class="sign-up-form">
               <a href="projetoWEB.html">
                 <div id="mouseover" onmouseover="mudarCor(this)" onmouseout="restaurarCor(this)">
                   <div class="logo">
@@ -83,35 +70,17 @@
 
               <div class="actual-form">
                 <div class="input-wrap">
-                  <input
-                    type="text"
-                    id="nome2"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
+                  <input type="text" id="nome2" name="nome2" minlength="4" class="input-field" autocomplete="off" required/>
                   <label>Nome</label>
                 </div>
 
                 <div class="input-wrap">
-                  <input
-                    type="email"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
+                  <input type="email" name="email" class="input-field" autocomplete="off" required/>
                   <label>Email</label>
                 </div>
 
                 <div class="input-wrap">
-                  <input
-                    type="password"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
+                  <input type="password" name="senha2" minlength="4" class="input-field"autocomplete="off" required/>
                   <label>Senha</label>
                 </div>
 

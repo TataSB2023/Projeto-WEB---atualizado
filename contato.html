@@ -13,17 +13,17 @@
     </script>
     <div class="content">
         <h1>Formulário </h1>
-        <form id="form">
+        <form id="form" action="php/contato.php" method="post">
             <div>
-                <input type="text" placeholder="Digite seu nome" id="nome" class="inputs required" oninput="nameValidate()">
+                <input type="text" name="nome" placeholder="Digite seu nome" id="nome" class="inputs required" oninput="nameValidate()">
                 <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
             </div>
             <div>
-                <input type="email" placeholder="Digite seu melhor email" class="inputs required" oninput="emailValidate()">
+                <input type="email" name="email" placeholder="Digite seu melhor email" class="inputs required" oninput="emailValidate()">
                 <span class="span-required">Digite um email válido</span>
             </div>
             <div>
-                <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+                <input type="password" name="senha" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
                 <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
             </div>
             <div>
@@ -49,103 +49,21 @@
             <p>Qual motivo do contato?</p>
             <div class="box-select">
                 <div>
-                    <input type="checkbox" id="html" value="html" name="experiencias">
-                    <label for="html">Reclamação</label>
+                    <input type="checkbox" value="reclamacao" name="motivo[]">
+                    <label for="reclamacao">Reclamação</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="css" value="css" name="experiencias">
-                    <label for="css">Dúvida</label>
+                    <input type="checkbox" value="duvida" name="motivo[]">
+                    <label for="duvida">Dúvida</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="js" value="js" name="experiencias">
-                    <label for="js">Sugestão</label>
+                    <input type="checkbox" value="sugestao" name="motivo[]">
+                    <label for="sugestao">Sugestão</label>
                 </div>
             </div>
-            <button type="submit">Enviar</button>
+            <input type="submit" name="submit">
         </form>
     </div>
+    <script src="js/contato.js"></script>
 </body>
-
-
-<script>
-    const form   = document.getElementById('form');
-    const campos = document.querySelectorAll('.required');
-    const spans  = document.querySelectorAll('.span-required');
-    const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        nameValidate();
-        emailValidate();
-        mainPasswordValidate();
-        comparePassword();
-    });
-
-    function setError(index){
-        campos[index].style.border = '2px solid #e63636';
-        spans[index].style.display = 'block';
-    }
-
-    function removeError(index){
-        campos[index].style.border = '';
-        spans[index].style.display = 'none';
-    }
-
-    function nameValidate(){
-        if(campos[0].value.length < 3)
-        {
-            setError(0);
-        }
-        else
-        {
-            removeError(0);
-        }
-    }
-
-    function emailValidate(){
-        if(!emailRegex.test(campos[1].value))
-        {
-            setError(1);
-        }
-        else
-        {
-            removeError(1);
-        }
-    }
-
-    function mainPasswordValidate(){
-        if(campos[2].value.length < 8)
-        {
-            setError(2);
-        }
-        else
-        {
-            removeError(2);
-            comparePassword();
-        }
-    }
-
-    function comparePassword(){
-        if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
-        {
-            removeError(3);
-        }
-        else
-        {
-            setError(3);
-        }
-    }
-
-    const inputField = document.getElementById("nome");
-    inputField.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        inputField.value = inputField.value.toUpperCase();
-    });
-
-    const inputField2 = document.getElementById("descricao");
-    inputField2.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        inputField2.value = inputField2.value.toUpperCase();
-    });
-</script>
 </html>
