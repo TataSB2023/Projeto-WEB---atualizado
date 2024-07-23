@@ -58,7 +58,7 @@
           </tbody>
      </table>
       <div class="text-center">
-           <button type="button" class="btn btn-primary"><a href="inserir.php">Adicionar Sugestão/Reclamação/Dúvida</a></button>
+           <button type="button" class="btn btn-primary"><a href="../contato.html">Adicionar Sugestão/Reclamação/Dúvida</a></button>
       </div>
     </body>
 </div>

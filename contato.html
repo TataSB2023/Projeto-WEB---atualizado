@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!--
-<php include("crud/conexao.php");
-    $dados = selectAllcontato();
+<?php include("crud/conexao.php");
 ?>
 -->
 <html lang="en">
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="css/contato.css">
     <title>Formulário NG</title>
 </head>
-<body> 
+<body>
     <script>
         alert("Não tenha medo! Entre em contato conosco e resolva seus problemas!");
     </script>
@@ -86,7 +85,9 @@
                 </div>
             </div>
             -->
+            <input type="hidden" name="acao" value="inserir">
             <input type="submit" name="submit">
+            
             <!--onsubmit="inserirContato()"-->
         </form>
         <!--

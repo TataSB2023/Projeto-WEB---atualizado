@@ -79,7 +79,7 @@ function selectIdContato($id) {
 }
 
 function voltarIndex(){
-    header("Location:index.php");
+    header("Location:../contato.html");
 }
 
 ?>
