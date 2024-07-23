@@ -37,7 +37,7 @@ function inserirContato() {
     VALUES ('{$_POST["nome"]}','{$_POST["email"]}','{$_POST["senha"]}','{$_POST["descricao"]}','{$_POST["sexo"]}','{$_POST["motivo"]}')";
     $banco->query($sql);
     $banco->close();
-    voltarIndex();
+    voltarForm();
 }
 
 function atualizarContato() {
@@ -78,8 +78,11 @@ function selectIdContato($id) {
     return $contato;
 }
 
-function voltarIndex(){
+function voltarForm(){
     header("Location:../contato.html");
+}
+function voltarIndex(){
+    header("Location:index.php");
 }
 
 ?>
