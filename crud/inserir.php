@@ -4,7 +4,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <meta charset="UTF-8">
 <div class="container">
-//nome,email,senha,descricao,sexo,motivo
     <form name="dadosContato1" action="conexao.php" method="post">
         <table>
             <tbody>

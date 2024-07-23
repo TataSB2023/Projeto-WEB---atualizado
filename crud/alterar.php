@@ -17,11 +17,11 @@ $contato = selectIdContato($_POST["id"]);
                 </tr>
                 <tr>
                     <td>Email: </td>
-                    <td><input type="date" name="email" value="<?=$contato["email"]?>"></td>
+                    <td><input type="email" name="email" value="<?=$contato["email"]?>"></td>
                 </tr>
                 <tr>
                     <td>Senha: </td>
-                    <td><input type="text" name="senha" value="<?=$contato["senha"]?>"></td>
+                    <td><input type="password" name="senha" value="<?=$contato["senha"]?>"></td>
                 </tr>
                 <tr>
                     <td>Descrição: </td>
@@ -29,15 +29,15 @@ $contato = selectIdContato($_POST["id"]);
                 </tr>
                 <tr>
                     <td>Sexo: </td>
-                    <td><input type="date" name="sexo" value="<?=$contato["sexo"]?>"></td>
+                    <td><input type="text" name="sexo" value="<?=$contato["sexo"]?>"></td>
                 </tr>
                 <tr>
                     <td>Motivo: </td>
-                    <td><input type="date" name="motivo" value="<?=$contato["motivo"]?>"></td>
+                    <td><input type="text" name="motivo" value="<?=$contato["motivo"]?>"></td>
                 </tr>
                 <tr>
                     <td><input type="hidden" name="acao" value="atualizar">
-                        <input type="hidden" name="id" value="<?=$contato["nome"]?>">
+                        <input type="hidden" name="id" value="<?=$contato["id"]?>">
                     </td>
                     <td><input type="submit" name="Enviar" value="Enviar"></td>
                 </tr>

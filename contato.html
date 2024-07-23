@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+<php include("crud/conexao.php");
+    $dados = selectAllcontato();
+?>
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,12 +13,17 @@
     <title>Formulário NG</title>
 </head>
 <body>
+    
     <script>
         alert("Não tenha medo! Entre em contato conosco e resolva seus problemas!");
     </script>
     <div class="content">
         <h1>Formulário </h1>
-        <form id="form" name="dadosContato" action="php/contato.php" method="post">
+        <!--
+        <?php
+            foreach($dados as $contato) { ?>
+        -->
+        <form id="form" name="dadosContato" action="crud/conexao.php" method="post">
             <div>
                 <input type="text" name="nome" placeholder="Digite seu nome" id="nome" class="inputs required" oninput="nameValidate()">
                 <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
@@ -49,6 +59,21 @@
             <p>Qual motivo do contato?</p>
             <div class="box-select">
                 <div>
+                    <input type="radio" id="reclamacao" value="reclamacao" name="motivo">
+                    <label for="reclamacao">Reclamação</label>
+                </div>
+                <div>
+                    <input type="radio" id="duvida" value="duvida" name="motivo">
+                    <label for="duvida">Dúvida</label>
+                </div>
+                <div>
+                    <input type="radio" id="sugestao" value="sugestao" name="motivo">
+                    <label for="sugestao">Sugestão</label>
+                </div>
+            </div>
+            <!-- 
+            <div class="box-select">
+                <div>
                     <input type="checkbox" value="reclamacao" name="motivo[]">
                     <label for="reclamacao">Reclamação</label>
                 </div>
@@ -61,8 +86,13 @@
                     <label for="sugestao">Sugestão</label>
                 </div>
             </div>
+            -->
             <input type="submit" name="submit">
+            <!--onsubmit="inserirContato()"-->
         </form>
+        <!--
+        <?php } ?>
+        -->
     </div>
     <script src="js/contato.js"></script>
 </body>
